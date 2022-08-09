@@ -22,6 +22,7 @@ namespace Client
             systems.Add(new VelocityByKeyboardSystem());
             systems.Add(new RotateToDirectionSystem());
             systems.Add(new TargetingAtPlayerSystem());
+            systems.Add(new JoystickMovementComponentSystem());
 
             systems.Add(new DirectionByMouseSystem());
             systems.Add(new RotationLikeParentSystem());
@@ -67,6 +68,16 @@ namespace Client
             systems.Init();
         }
 
+        private void InitInputSystem()
+        {
+            Input.simulateMouseWithTouches = false;
+
+            switch (SystemInfo.deviceType)
+            {
+                // case 
+            }
+        }
+        
         void Update()
         {
             systems?.Run();
