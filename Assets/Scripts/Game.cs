@@ -18,6 +18,7 @@ namespace Client
             systems.Add(new InitSystem());
 
             systems.Add(new PeriodicTimerSystem());
+            systems.Add(new CameraFollowSystem());
 
             systems.Add(new VelocityByKeyboardSystem());
             systems.Add(new RotateToDirectionSystem());

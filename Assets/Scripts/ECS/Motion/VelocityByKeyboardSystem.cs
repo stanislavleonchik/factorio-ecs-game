@@ -22,7 +22,6 @@ namespace Client
             foreach (var entity in filter.Value)
             {
                 ref var body = ref bodyPool.Value.Get(entity);
-                ref var control = ref keyControlPool.Value.Get(entity);
                 ref var speed = ref speedPool.Value.Get(entity);
                 body.value.velocity = direction * speed.value;
             }
